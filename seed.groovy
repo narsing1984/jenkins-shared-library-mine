@@ -4,12 +4,12 @@ def createDeploymentJob(jobName, repourl) {
       cps {
         script('''
           jsl = library(
-            identifier: "jenkins-shared-library@develop",
+            identifier: "jenkins-shared-library@master",
             retriever: modernSCM(
               [
                 $class: 'GitSCMSource',
-                remote: 'https://tech-devops@bitbucket.org/sil-dev/dsl-jobs.git',
-                credentialsId: 'bitbucket_cred'
+                remote: 'https://github.com/durgaprasad444/jenkins-shared-library-mine.git',
+                
               ]
             )
           )
