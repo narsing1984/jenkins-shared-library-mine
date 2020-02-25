@@ -8,7 +8,7 @@ def createDeploymentJob(jobName, repourl) {
             retriever: modernSCM(
               [
                 $class: 'GitSCMSource',
-                remote: 'https://tech-devops@bitbucket.org/sil-dev/dsl-jobs.git',
+                remote: 'https://github.com/durgaprasad444/jenkins-shared-library-mine.git',
                 credentialsId: 'bitbucket_cred'
               ]
             )
