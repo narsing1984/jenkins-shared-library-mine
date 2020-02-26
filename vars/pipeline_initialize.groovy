@@ -18,8 +18,9 @@ volumes: [
         extensions: [],
         submoduleCfg: [],
         userRemoteConfigs: [[
-            credentialsId: 'bitbucket_cred', 
-          url: "https://tech-devops@bitbucket.org/sil-dev/${folder}.git"
+            #credentialsId: 'bitbucket_cred', 
+          #url: "https://tech-devops@bitbucket.org/sil-dev/${folder}.git"
+          url: "https://github.com/narsing1984/${folder}.gitt"
              ]]])
                 
      stage("LOADING PIPELINE_CONFIG") {
@@ -27,8 +28,9 @@ volumes: [
 sh 'rm deployconfig -rf; mkdir deployconfig; chmod -R 777 deployconfig'
 dir ('deployconfig') {
 git branch: 'master',
-credentialsId: 'bitbucket_cred',
-url: 'https://tech-devops@bitbucket.org/sil-dev/deploy-configs.git'
+#credentialsId: 'bitbucket_cred',
+#url: 'https://tech-devops@bitbucket.org/sil-dev/deploy-configs.git'
+     url: "https://github.com/narsing1984/${folder}.gitt"
 }
 
    
